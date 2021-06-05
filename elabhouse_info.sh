@@ -31,7 +31,7 @@ echo -e "Operating System:\t"`hostnamectl | grep "Operating System" | cut -d ' '
 echo -e "Kernel:\t\t\t"`uname -r`
 echo -e "Architecture:\t\t"`arch`
 echo -e "Processor Name:\t\t"`awk -F':' '/^model name/ {print $2}' /proc/cpuinfo | uniq | sed -e 's/^[ \t]*//'`
-echo -e "Active User:\t\t"`echo $USER`
+echo -e "Active Users:\t\t"`users`
 echo -e "System Main IP:\t\t"`hostname -I`
 echo ""
 echo -e "-------------------------------CPU/Memory Usage------------------------------"
